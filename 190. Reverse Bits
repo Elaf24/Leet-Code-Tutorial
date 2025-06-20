@@ -1,0 +1,10 @@
+
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def reverseBits(self, n):
+        result=0
+        for i in range(32):
+            bit = 1 & (n>>i)
+            result=result | (bit<<(31-i))
+        return result
